@@ -1,0 +1,53 @@
+Name            Gates;
+Partno          CA0001;
+Revision        04;
+Date            9/12/89;
+Designer        G. Woolhiser;
+Company         Logical Devices, Inc.;
+Location        None;
+Assembly        None;
+Device          g16v8;
+
+/****************************************************************/
+/*                                                              */
+/*      This is a example to demonstrate how CUPL               */
+/*      compiles simple gates.                                  */
+/*                                                              */
+/****************************************************************/
+
+/*
+ * Inputs:  define inputs to build simple gates from
+ */
+
+Pin 1 =  a;
+Pin 2 =  b;
+
+/*
+ * Outputs:  define outputs as active HI levels
+ *
+ */
+
+Pin 12 = inva;
+Pin 13 = invb;
+Pin 14 = and;
+Pin 15 = nand;
+Pin 16 = or;
+Pin 17 = nor;
+Pin 18 = xor;
+Pin 19 = xnor;
+
+/*
+ * Logic:  examples of simple gates expressed in CUPL
+ */
+
+inva = !a;              /* inverters */
+invb = !b;
+and  = a & b;           /* and gate */
+nand = !(a & b);        /* nand gate */
+or   = a # b;           /* or gate */
+nor  = !(a # b);        /* nor gate */
+xor  = a $ b;           /* exclusive or gate */
+xnor = !(a $ b);        /* exclusive nor gate */
+
+
+
