@@ -1,0 +1,27 @@
+Name            FlipFlopD;
+Partno          CPLD;
+Revision        01;
+Date            08/02/25;
+Designer        Paolo Aliverti;
+Company         zeppelinmaker;
+Location        None;
+Assembly        None;
+Device          g16v8;
+
+/* Pin ingresso */
+
+Pin 1 = CLK;
+Pin 2 = A;
+
+/* output */
+
+Pin 19 = Q1;
+Pin 18 = Q2;
+Pin 17 = Q3;
+
+/* espressioni */
+
+Q1.d = A;
+Q2.d = Q1;
+Q3.d = Q2;
+
